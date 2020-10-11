@@ -1,7 +1,9 @@
+<!-- header (base.htmlより)  -->
 {% extends 'app/base.html' %}
 {% block content %}
     <div class="row">
         <div class="col-md-3">
+            <!-- 月間表示  -->
             {% include 'app/includes/month.html' %}
             <hr>
             <form action="" method="POST">
@@ -21,6 +23,7 @@
             </form>
         </div>
         <div class="col-md-9">
+            <!-- 週刊表示  -->
             {% include 'app/includes/week.html' %}
         </div>
     </div>
