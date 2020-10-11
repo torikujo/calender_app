@@ -24,4 +24,3 @@ django-simple-calendar
 
     python manage.py migrate
     python manage.py runserver
-

@@ -4,11 +4,12 @@ from .models import Schedule
 
 class BS4ScheduleForm(forms.ModelForm):
     """Bootstrapに対応するためのModelForm"""
-
+    #Meta:内部クラス（インスタンス化されないようにする）
     class Meta:
         model = Schedule
         fields = ('summary', 'description', 'start_time', 'end_time')
         widgets = {
+            #TextInput関数:フォームをクリアにする関数
             'summary': forms.TextInput(attrs={
                 'class': 'form-control',
             }),
@@ -23,6 +24,7 @@ class BS4ScheduleForm(forms.ModelForm):
             }),
         }
 
+    #end_timeのみの入力値をクリアにする関数
     def clean_end_time(self):
         start_time = self.cleaned_data['start_time']
         end_time = self.cleaned_data['end_time']

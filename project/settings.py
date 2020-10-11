@@ -25,7 +25,7 @@ SECRET_KEY = '+yw7(%++5pe*=k4tyc$+)-cnecwqv95kf+e1g77_yth2byf#9q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', '.amazonaws.com']#pythonanywhereのホストネームを含めてデプロイに備える。cloud9でも動作確認できるようにawsも追加
 
 
 # Application definition
@@ -119,3 +119,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') #静的ファイルのパスを追加
